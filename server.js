@@ -550,6 +550,11 @@ app.get("/questions/10", (request, response) => {
   response.json(shuffled.slice(0, 10));
 });
 
+app.get("/questions/20", (request, response) => {
+  const shuffled = questions.sort(() => 0.5 - Math.random());
+  response.json(shuffled.slice(0, 20));
+});
+
 app.listen(process.env.PORT || PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
