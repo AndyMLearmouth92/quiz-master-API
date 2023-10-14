@@ -537,8 +537,6 @@ const questions = [
   },
 ];
 
-const shuffled = questions.sort(() => 0.5 - Math.random());
-
 app.get("/", (request, response) => {
   response.sendFile(__dirname + "/index.html");
 });
@@ -548,6 +546,7 @@ app.get("/questions", (request, response) => {
 });
 
 app.get("/questions/10", (request, response) => {
+  const shuffled = questions.sort(() => 0.5 - Math.random());
   response.json(shuffled.slice(0, 10));
 });
 
