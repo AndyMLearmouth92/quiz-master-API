@@ -1,4 +1,4 @@
-# Wordle API
+# Quiz Master API
 
 A simple API that returns quiz questions to be used in different quiz games. I mainly built this to use with my React quiz project but it could be used in different scenarios.
 
